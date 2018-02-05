@@ -1,0 +1,5 @@
+#!/bin/bash
+for FILE in $(ls dot/*.dot);do
+  NEW_FILE=$(echo $FILE|sed -e 's|dot/|images/|g' -e 's|\.dot|.png|g')
+  dot -Tpng -o$NEW_FILE $FILE
+done
