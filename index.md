@@ -1,4 +1,4 @@
-System for batch importing records to [Melinda](https://www.kansalliskirjasto.fi/en/services/metadata-reserve-services/melinda).
+System for importing records batches to [Melinda](https://www.kansalliskirjasto.fi/en/services/metadata-reserve-services/melinda).
 
 ## Micro services
 
@@ -6,7 +6,7 @@ The system is implemented as micro services. Each service also depends on shared
 
 ### API
 
-[API](https://github.com/NatLibFi/melinda-record-import-api) provides methods for uploading blobs and altering their states.
+[API](https://github.com/NatLibFi/melinda-record-import-api) provides methods for uploading blobs, altering blob states and profile management.
 
 ### Transformer
 
