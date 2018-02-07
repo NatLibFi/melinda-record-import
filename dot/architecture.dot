@@ -2,18 +2,14 @@ digraph G {
   node[shape="Mrecord"]
 
   Source[label="GUI or service, e.g. File transfer server"]
-  API[label="<f0> |<f1> API |<f2> "]
-  Transformer[label="<f0> |<f1> Transformer |<f2> "]
-  Importer[label="<f0> |<f1> Importer |<f2> "]
-  ImportQueue[label="<f0> |<f1> ImportQueue |<f2> "]
-
+  
   Source -> API[label="Blob is uploaded"]
 
-  API:f0 -> Transformer:f0[label="New blobs for transformation"]
-  Transformer:f0 -> ImportQueue:f0[label="Transformed records to queue"]
-  ImportQueue:f2 -> Importer:f0[label="Records for import"]
-  Importer:f2 -> Melinda
+  API -> Transformer[label="New blobs for transformation"]
+  Transformer -> ImportQueue[label="Transformed records to queue"]
+  ImportQueue -> Importer[label="Records for import"]
+  Importer -> Melinda
 
-  Transformer:f2 -> API:f2[label="Update state"]
-  Importer:f2 -> API:f2[label="Update state"]
+  Transformer -> API[label="Update state"]
+  Importer -> API[label="Update state"]
 }
