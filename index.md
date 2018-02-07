@@ -1,4 +1,4 @@
-System for importing records batches to [Melinda](https://www.kansalliskirjasto.fi/en/services/metadata-reserve-services/melinda).
+System for importing record batches to [Melinda](https://www.kansalliskirjasto.fi/en/services/metadata-reserve-services/melinda).
 
 ## Micro services
 
